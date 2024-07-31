@@ -1,0 +1,13 @@
+def eliminar_duplicados_orden(lista):
+    vista = set()
+    resultado = []
+    for item in lista:
+        if item not in vista:
+            vista.add(item)
+            resultado.append(item)
+    return resultado
+
+lista_duplicados = [22, 33, 22, 44, 55, 33, 66, 77, 88, 77]
+resultado_duplicados = eliminar_duplicados_orden(lista_duplicados)
+print(f"Lista original: {lista_duplicados}")
+print(f"Lista sin duplicados: {resultado_duplicados}")
